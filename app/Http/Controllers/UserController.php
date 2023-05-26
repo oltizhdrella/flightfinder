@@ -38,6 +38,9 @@ class UserController extends Controller
 
             return redirect()->to('/home');
 
+        }else{
+            toastr()->error('Wrong credentials!');
+            return redirect()->to('/login');
         }
        
         
